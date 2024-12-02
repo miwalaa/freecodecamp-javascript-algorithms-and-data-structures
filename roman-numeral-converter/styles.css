@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Lato&display=swap');
+
+:root {
+    --light-grey: #d3d3d3;
+    --red-text: #AE445A;
+    --purple-body-background: #432E54;
+    --purple-input-background: #2f1d3d;
+    --blue-div-background: #4B4376;
+    --red-div-background: #E8BCB9;
+    --danger-color: #850000;
+    --danger-background: #ffadad;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--purple-body-background);
+    color: var(--white);
+    padding: 50px 20px;
+}
+
+h1 {
+    color: white;
+    max-width: 400px;
+    font-family: 'Castoro Titling', cursive;
+    font-size: 2.4rem;
+    margin: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.container {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+#form fieldset {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 500px;
+    background-color: var(--blue-div-background);
+    padding: 20px;
+    border: 3px solid white;
+}
+
+label {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--light-grey);
+    margin: 12px 15px;
+    padding: 0;
+    border-radius: 5px;
+}
+
+#number {
+    font-size: 2.5rem;
+    color: white;
+    background-color: var(--purple-input-background);
+    padding: 12px 15px;
+    margin: 8px 15px;
+    border: 2px solid var(--light-grey);
+}
+
+#convert-btn {
+    font-size: 24px;
+    padding: 12px 15px;
+    margin: 5px 15px;
+    background: linear-gradient(#fecc4c, #ffac33);
+    border: 3px solid #feac32;
+    cursor: pointer;
+}
+  
+.output {
+    color: white;
+    background-color: var(--blue-div-background);
+    border: 3px solid var(--light-grey);
+    font-size: 2.5rem;
+    width: 600px;
+    min-height: 55px;
+    margin-top: 25px;
+    padding: 15px;
+    overflow-wrap: break-word;
+    text-align: center;
+}
+
+.alert {
+  font-size: 2rem;
+  background-color: var(--danger-background);
+  border: 3px solid var(--danger-color);
+  color: var(--danger-color);
+}
+
+.hidden {
+    display: none;
+}
