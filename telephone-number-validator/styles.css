@@ -16,9 +16,13 @@ body {
     background-color: var(--blue-gray);
 }
 
+img {
+    margin: 15px 0 10px 0;
+}
+
 h1 {
     width: 450px;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
     color: var(--soft-pink)
 }
@@ -27,6 +31,7 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
 }
 
 .phone-div {
@@ -58,14 +63,23 @@ h1 {
     background-color: white;
 }
 
+.result-div {
+    width: 230px;
+    height: 310px;
+    margin-top: 18px;
+}
+
 label {
     font-size: 1.1rem;
     margin: 8px 0;
 }
 
-#number {
+#user-input {
+    font-size: 20px;
     width: 200px;
-    height: 30px;
+    text-align: center;
+    height: 35px;
+    padding: 10px;
 }
 
 .buttons-div {
