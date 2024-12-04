@@ -29,7 +29,7 @@ const validateNumber = (number) => {
         validParagraph.textContent = validMessage;
         return userInput.value = "";
     } else {
-        const invalidMessage = `Invalid phone number: ${number}`;
+        const invalidMessage = `Invalid US number: ${number}`;
         const invalidParagraph = resultsDiv.appendChild(document.createElement("p"));
         invalidParagraph.classList.add("invalid-paragraph");
         invalidParagraph.textContent = invalidMessage;
