@@ -11,11 +11,28 @@ checkBtn.addEventListener("click", () => {
     validateNumber(userInput.value)
 })
 
+userInput.addEventListener("keypress", e => {
+    if (e.key === "Enter") {
+        validateNumber(userInput.value);
+    }
+    return;
+});
+
 clearBtn.addEventListener("click", () => resultsDiv.innerHTML = "");
 
 const validateNumber = (number) => {
-    const regex = /(?:(1)[ ]?)?\(?(5{3})\)?[ -]?(5{3})[ -]?(5{4})/;
+    const regex = /(?:(1)\s?)?\(?(5{3})\)?[ -]?(5{3})[ -]?(5{4})$/;
     if (regex.test(number)) {
+        const validMessage = `Valid US number: ${number}`;
+        const validParagraph = resultsDiv.appendChild(document.createElement("p"));
+        validParagraph.classList.add("valid-paragraph");
+        validParagraph.textContent = validMessage;
+        return userInput.value = "";
+    } else {
+        const invalidMessage = `Invalid phone number: ${number}`;
+        const invalidParagraph = resultsDiv.appendChild(document.createElement("p"));
+        invalidParagraph.classList.add("invalid-paragraph");
+        invalidParagraph.textContent = invalidMessage;
         return userInput.value = "";
     }
 }

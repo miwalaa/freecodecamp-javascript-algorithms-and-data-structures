@@ -7,8 +7,8 @@
 :root {
     --bluish: #1F2544;
     --blue-gray: #474F7A;
-    --lavender: #81689D;
-    --soft-pink: #FFD0EC;
+    --brown: rgb(77, 56, 0);
+    --green: rgb(0, 71, 27);
 }
 
 body {
@@ -24,7 +24,7 @@ h1 {
     width: 450px;
     font-size: 2.2rem;
     text-align: center;
-    color: var(--soft-pink)
+    color: white;
 }
 
 .container {
@@ -44,6 +44,7 @@ h1 {
     margin: 15px 0;
     border-radius: 10px;
     background-color: var(--bluish);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .camera-div {
@@ -63,12 +64,6 @@ h1 {
     background-color: white;
 }
 
-.result-div {
-    width: 230px;
-    height: 310px;
-    margin-top: 18px;
-}
-
 label {
     font-size: 1.1rem;
     margin: 8px 0;
@@ -80,6 +75,25 @@ label {
     text-align: center;
     height: 35px;
     padding: 10px;
+}
+
+#results-div {
+    font-size: 22px;
+    font-weight: 500;
+    text-align: center;
+    width: 230px;
+    height: 310px;
+    margin-top: 18px;
+    padding: 5px;
+    overflow: scroll;
+}
+
+.valid-paragraph {
+    color: var(--green)
+}
+
+.invalid-paragraph {
+    color: var(--brown)
 }
 
 .buttons-div {
