@@ -21,7 +21,7 @@ userInput.addEventListener("keypress", e => {
 clearBtn.addEventListener("click", () => resultsDiv.innerHTML = "");
 
 const validateNumber = (number) => {
-    const regex = /(?:(1)\s?)?\(?(5{3})\)?[ -]?(5{3})[ -]?(5{4})$/;
+    const regex = /^(?:1\s?)?\(?5{3}\)?[ -]?5{3}[ -]?5{4}$/;
     if (regex.test(number)) {
         const validMessage = `Valid US number: ${number}`;
         const validParagraph = resultsDiv.appendChild(document.createElement("p"));
