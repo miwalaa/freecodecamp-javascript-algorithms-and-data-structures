@@ -9,13 +9,14 @@ checkBtn.addEventListener("click", () => {
         return false;
     }
     validateNumber(userInput.value)
+    userInput.value = "";
 })
 
 userInput.addEventListener("keypress", e => {
     if (e.key === "Enter") {
         validateNumber(userInput.value);
+        userInput.value = "";
     }
-    return;
 });
 
 clearBtn.addEventListener("click", () => resultsDiv.innerHTML = "");
@@ -28,12 +29,10 @@ const validateNumber = (number) => {
         const validParagraph = resultsDiv.appendChild(document.createElement("p"));
         validParagraph.classList.add("valid-paragraph");
         validParagraph.textContent = validMessage;
-        return userInput.value = "";
     } else {
         const invalidMessage = `Invalid US number: ${number}`;
         const invalidParagraph = resultsDiv.appendChild(document.createElement("p"));
         invalidParagraph.classList.add("invalid-paragraph");
         invalidParagraph.textContent = invalidMessage;
-        return userInput.value = "";
     }
 }
