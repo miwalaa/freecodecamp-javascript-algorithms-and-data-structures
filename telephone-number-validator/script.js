@@ -3,14 +3,37 @@ const checkBtn = document.getElementById("check-btn");
 const clearBtn = document.getElementById("clear-btn");
 const resultsDiv = document.getElementById("results-div");
 
-checkBtn.addEventListener("click", () => {
-    if (userInput.value === "") {
+const validateNumber = (number) => {
+    if (number === "") {
         alert("Please provide a phone number");
-        return false;
+        return;
     }
+
+    const countryCode = "^(1\\s?)?";
+    const areaCode = "(\\([0-9]{3}\\)|[0-9]{3})";
+    const spacesDashes = "[\\s\\-]?";
+    const phoneNumber = "[0-9]{3}[\\s\\-]?[0-9]{4}$";
+    const phoneRegex = new RegExp(
+        `${countryCode}${areaCode}${spacesDashes}${phoneNumber}`
+    );
+
+    const pTag = document.createElement("p");
+    pTag.className = "results-text";
+    phoneRegex.test(number)
+        ? (pTag.style.color = "#00471b")
+        : (pTag.style.color = "#4d3800");
+    pTag.appendChild(
+        document.createTextNode(
+            `${phoneRegex.test(number) ? 'Valid' : 'Invalid'} US number: ${number}`
+        )
+    );
+    resultsDiv.appendChild(pTag);
+};
+
+checkBtn.addEventListener("click", () => {
     validateNumber(userInput.value)
     userInput.value = "";
-})
+});
 
 userInput.addEventListener("keypress", e => {
     if (e.key === "Enter") {
@@ -19,20 +42,4 @@ userInput.addEventListener("keypress", e => {
     }
 });
 
-clearBtn.addEventListener("click", () => resultsDiv.innerHTML = "");
-
-const validateNumber = (number) => {
-    const regex = /^(?:1\s?)?(\(5{3}\)|5{3})[ -]?5{3}[ -]?5{4}$/;
-    const regex2 = /1 456 789 4444/;
-    if (regex.test(number) | regex2.test(number)) {
-        const validMessage = `Valid US number: ${number}`;
-        const validParagraph = resultsDiv.appendChild(document.createElement("p"));
-        validParagraph.classList.add("valid-paragraph");
-        validParagraph.textContent = validMessage;
-    } else {
-        const invalidMessage = `Invalid US number: ${number}`;
-        const invalidParagraph = resultsDiv.appendChild(document.createElement("p"));
-        invalidParagraph.classList.add("invalid-paragraph");
-        invalidParagraph.textContent = invalidMessage;
-    }
-}
+clearBtn.addEventListener("click", () => resultsDiv.textContent = "");

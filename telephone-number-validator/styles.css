@@ -88,14 +88,6 @@ label {
     overflow: scroll;
 }
 
-.valid-paragraph {
-    color: var(--green)
-}
-
-.invalid-paragraph {
-    color: var(--brown)
-}
-
 .buttons-div {
     margin-top: 5px;
 }
