@@ -29,14 +29,33 @@ main {
 .container {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.top-display-screen-container {
+.price-screen {
     font-size: 20px;
-    width: 200px;
+    width: 220px;
     padding: 5px;
     color: var(--light-ivory);
     background-color: var(--dark-charcoal);
     border: var(--light-ivory) 10px solid;
     text-align: center;
+}
+
+.connector {
+    position: relative;
+    left: 25px;
+    height: 50px;
+    width: 40px;
+    background-color: var(--light-ivory);
+}
+
+.top-register {
+    width: 500px;
+    height: 500px;
+    background-color: var(--light-ivory);
+}
+
+.cash-drawer-display {
+    background-color: var(--light-ivory);
 }
