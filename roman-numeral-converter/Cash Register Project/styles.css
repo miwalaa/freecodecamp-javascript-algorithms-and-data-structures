@@ -1,8 +1,8 @@
 :root {
-    --dark-charcoal: #131010;
-    --dark-brown: #543A14;
-    --peach-orange: #F0BB78;
-    --light-ivory: #FFF0DC;
+    --white: #ffffff;
+    --olive-drab: #525B44;
+    --sage-green: #85A98F;
+    --moss-green: #5A6C57;
 }
 
 * {
@@ -12,7 +12,18 @@
 }
 
 body {
-    background-color: var(--peach-orange)
+    background-color: var(--sage-green);
+}
+
+img {
+    margin-top: 25px;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--white);
+    margin-top: 25px;
 }
 
 main {
@@ -24,6 +35,28 @@ main {
 .input-div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+}
+
+.input-div label {
+    color: var(--white);
+    font-size: 18px;
+    text-align: center;
+}
+
+#cash {
+    font-size: 18px;
+    width: 210px;
+    padding: 2px 5px;
+    margin: 5px 0 10px 0;
+}
+
+#purchase-btn {
+    width: 50%;
+    height: 30px;
+    background-image: linear-gradient(#fecc4c, #ffac33);
+    border-color: #feac32;
 }
 
 .container {
@@ -36,9 +69,9 @@ main {
     font-size: 20px;
     width: 220px;
     padding: 5px;
-    color: var(--light-ivory);
-    background-color: var(--dark-charcoal);
-    border: var(--light-ivory) 10px solid;
+    color: var(--olive-drab);
+    background-color: var(--white);
+    border: var(--moss-green) 8px solid;
     text-align: center;
 }
 
@@ -47,18 +80,18 @@ main {
     left: 25px;
     height: 35px;
     width: 40px;
-    background-color: var(--light-ivory);
+    background-color: var(--moss-green);
 }
 
 .top-register {
     display: flex;
     flex-direction: row;
-    width: 340px;
+    width: 320px;
     height: 250px;
-    padding: 20px;
-    background-color: var(--light-ivory);
+    padding: 18px;
+    background-color: var(--moss-green);
     border-radius: 35px 35px 0 0;
-    gap: 80px;
+    gap: 40px;
 }
 
 .btn-container {
@@ -70,29 +103,34 @@ main {
 .btn {
     height: 20px;
     width: 20px;
-    background-color: var(--dark-charcoal);
+    background-color: var(--white);
 }
 
 
 .cash-drawer-display {
+    font-size: 18px;
     background-color: white;
     width: 180px;
     height: 210px;
+}
+
+.cash-drawer-display p {
+    padding-left: 5px;
 }
 
 .bottom-register {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 340px;
+    width: 320px;
     height: 60px;
-    margin-top: 10px;
-    background-color: var(--light-ivory);
+    margin: 10px 0 20px 0;
+    background-color: var(--moss-green);
 }
 
 .circle {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: var(--dark-charcoal);
+    background-color: var(--white);
 }
