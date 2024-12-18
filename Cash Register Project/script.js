@@ -16,14 +16,10 @@ let cid = [
     ['ONE HUNDRED', 100]
 ];
 
-const checkCashRegister = () => {
-    let cash = parseFloat(cashInput.value);
-    if (cash < price) {
-        alert("Customer does not have enough money to purchase the item");
-    } else if (cash === price) {
-        changeDue.innerHTML = "<p>No change due - customer paid with exact cash</p>";
-        
-    }
+console.log(cid.slice(0));
+
+function checkCashRegister(price, cash, cid) {
+    
 }
 
 purchaseBtn.addEventListener("click", checkCashRegister);
