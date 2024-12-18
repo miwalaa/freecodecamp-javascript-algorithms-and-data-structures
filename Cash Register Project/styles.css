@@ -16,7 +16,7 @@ body {
 }
 
 img {
-    margin-top: 25px;
+    margin-top: 35px;
 }
 
 h1 {
@@ -42,28 +42,27 @@ main {
 }
 
 .input-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 450px;
+    height: 50px;
     margin: 10px 0 25px 0;
-}
-
-.input-div label {
-    color: var(--white);
-    font-size: 18px;
-    text-align: center;
 }
 
 #cash {
     font-size: 18px;
     width: 210px;
+    height: 32px;
+    background-color: white;
     padding: 2px 5px;
-    margin: 5px 0 10px 0;
+    margin: 5px 5px 10px 0;
+    border-radius: 2px;
 }
 
-#purchase-btn {
-    width: 50%;
-    height: 30px;
+.check-btn-styles {
+    font-size: 16px;
+    font-weight: bold;
+    width: 100px;
+    height: 36px;
+    margin-right: 8px;
     background-image: linear-gradient(#fecc4c, #ffac33);
     border-color: #feac32;
 }
