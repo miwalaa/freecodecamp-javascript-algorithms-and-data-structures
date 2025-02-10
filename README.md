@@ -8,7 +8,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://miwalaa.github.io/freecodecamp-responsive-web-design/](https://miwalaa.github.io/freecodecamp-responsive-web-design/)
+[miwalaa.github.io/freecodecamp-javascript-algorithms-and-data-structures/](https://miwalaa.github.io/freecodecamp-javascript-algorithms-and-data-structures/)
 
 <h2>🛠️ Installation Steps:</h2>
 
