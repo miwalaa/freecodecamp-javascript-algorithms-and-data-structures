@@ -1,6 +1,6 @@
 <h1 align="center" id="title">Javascript Algorithms and Data Structures</h1>
 
-<p align="center"><img src="https://socialify.git.ci/miwalaa/freecodecamp-responsive-web-design/image?language=1&name=1&owner=1&theme=Light" alt="project-image"></p>
+<p align="center"><img src="https://socialify.git.ci/miwalaa/freecodecamp-responsive-web-design/image?language=1&name=1&owner=1&pattern=Solid&theme=Light" alt="project-image"></p>
 
 <p id="description">This repository contains multiple frontend projects built with HTML CSS and JavaScript. You can view them live through GitHub Pages.</p>
 
