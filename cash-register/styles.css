@@ -1,144 +1,261 @@
 :root {
-    --white: #ffffff;
-    --olive-drab: #525B44;
-    --sage-green: #85A98F;
-    --moss-green: #5A6C57;
+  --white: #ffffff;
+  --olive-drab: #525b44;
+  --sage-green: #85a98f;
+  --moss-green: #5a6c57;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--sage-green);
+  background-color: var(--sage-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
 }
 
-img {
-    margin-top: 35px;
-}
-
+/* Headings */
 h1 {
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--white);
-    margin-top: 25px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: var(--white);
+  margin-top: 25px;
+  text-align: center;
 }
 
+/* Layout */
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
 }
 
+/* Change Due */
 #change-due {
-    margin-top: 15px;
+  margin-top: 15px;
+  text-align: center;
 }
 
 #change-due p {
-    font-size: 20px;
-    color: white;
+  font-size: 1.2rem;
+  color: white;
 }
 
+/* Input Section */
 .input-div {
-    width: 450px;
-    height: 50px;
-    margin: 10px 0 25px 0;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  margin: 10px 0 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
 }
 
 #cash {
-    font-size: 18px;
-    width: 210px;
-    height: 32px;
-    background-color: white;
-    padding: 2px 5px;
-    margin: 5px 5px 10px 0;
-    border-radius: 2px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 200px;
+  height: 36px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 2px;
+  text-align: center;
 }
 
+/* Buttons */
 .check-btn-styles {
-    font-size: 16px;
-    font-weight: bold;
-    width: 100px;
-    height: 36px;
-    margin-right: 8px;
-    background-image: linear-gradient(#fecc4c, #ffac33);
-    border-color: #feac32;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 100%;
+  max-width: 100px;
+  height: 36px;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  border-color: #feac32;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
+.check-btn-styles:hover {
+  background-image: linear-gradient(#ffac33, #fecc4c);
+}
+
+/* Container */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
 }
 
+/* Price Screen */
 .price-screen {
-    font-size: 20px;
-    width: 220px;
-    padding: 5px;
-    color: var(--olive-drab);
-    background-color: var(--white);
-    border: var(--moss-green) 8px solid;
-    text-align: center;
+  font-size: 1.2rem;
+  width: 90%;
+  max-width: 220px;
+  padding: 5px;
+  color: var(--olive-drab);
+  background-color: var(--white);
+  border: var(--moss-green) 8px solid;
+  text-align: center;
 }
 
+/* Connector */
 .connector {
-    position: relative;
-    left: 25px;
-    height: 35px;
-    width: 40px;
-    background-color: var(--moss-green);
+  position: relative;
+  left: 25px;
+  height: 35px;
+  width: 40px;
+  background-color: var(--moss-green);
 }
 
+/* Register */
 .top-register {
-    display: flex;
-    flex-direction: row;
-    width: 320px;
-    height: 250px;
-    padding: 18px;
-    background-color: var(--moss-green);
-    border-radius: 35px 35px 0 0;
-    gap: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 320px;
+  height: 250px;
+  padding: 18px;
+  background-color: var(--moss-green);
+  border-radius: 35px 35px 0 0;
 }
 
+/* Button Container */
 .btn-container {
-    width: 100px;
-    height: 70px;
-    padding: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 rows */
+  gap: 5px; /* Adjust spacing between buttons */
+  width: 100px;
+  height: 70px;
+  padding: 5px;
 }
 
+/* Buttons */
 .btn {
-    height: 20px;
-    width: 20px;
-    background-color: var(--white);
+  height: 20px;
+  width: 20px;
+  background-color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-
+/* Cash Drawer */
 .cash-drawer-display {
-    font-size: 18px;
-    background-color: white;
-    width: 180px;
-    height: 210px;
+  font-size: 1rem;
+  background-color: white;
+  width: 90%;
+  max-width: 180px;
+  height: 210px;
+  padding: 10px;
+  overflow-y: auto;
 }
 
 .cash-drawer-display p {
-    padding-left: 5px;
+  padding-left: 5px;
 }
 
+/* Bottom Register */
 .bottom-register {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 320px;
-    height: 60px;
-    margin: 10px 0 20px 0;
-    background-color: var(--moss-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+  height: 60px;
+  margin: 10px 0 20px 0;
+  background-color: var(--moss-green);
 }
 
+/* Circle Button */
 .circle {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--white);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--white);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .input-div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #cash {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .check-btn-styles {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .top-register,
+  .bottom-register {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .price-screen {
+    font-size: 1rem;
+  }
+
+  .cash-drawer-display {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .price-screen {
+    font-size: 1rem;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .check-btn-styles {
+    font-size: 0.9rem;
+  }
+
+  .cash-drawer-display {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .input-div {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  #cash {
+    max-width: 100%;
+  }
+
+  .check-btn-styles {
+    max-width: 100%;
+  }
 }
