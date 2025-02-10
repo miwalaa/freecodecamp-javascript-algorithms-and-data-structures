@@ -1,102 +1,204 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 :root {
-    --bluish: #1F2544;
-    --blue-gray: #474F7A;
-    --brown: rgb(77, 56, 0);
-    --green: rgb(0, 71, 27);
+  --bluish: #1f2544;
+  --blue-gray: #474f7a;
+  --brown: rgb(77, 56, 0);
+  --green: rgb(0, 71, 27);
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: var(--blue-gray);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: var(--blue-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 img {
-    margin: 15px 0 10px 0;
+  margin: 15px 0 10px 0;
+  max-width: 100%;
+  height: auto;
 }
 
 h1 {
-    width: 450px;
-    font-size: 2.2rem;
-    text-align: center;
-    color: white;
+  max-width: 100%;
+  font-size: 2.2rem;
+  text-align: center;
+  color: white;
+  padding: 10px;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
 }
 
 .phone-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 250px;
-    height: 480px;
-    padding: 15px 15px 5px 15px;
-    margin: 15px 0;
-    border-radius: 10px;
-    background-color: var(--bluish);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 250px;
+  height: 480px;
+  padding: 10px 15px 5px 15px;
+  margin: 15px 0;
+  border-radius: 10px;
+  background-color: var(--bluish);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .camera-div {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-    background-color: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  background-color: white;
 }
 
 .screen-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 410px;
-    width: 230px;
-    background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 410px;
+  width: 100%;
+  max-width: 230px;
+  background-color: white;
+  padding: 10px;
 }
 
 label {
-    font-size: 1.1rem;
-    margin: 8px 0;
+  font-size: 1.1rem;
+  margin: 8px 0;
+  text-align: center;
 }
 
 #user-input {
-    font-size: 20px;
-    width: 200px;
-    text-align: center;
-    height: 35px;
-    padding: 10px;
+  font-size: 1rem;
+  width: 90%;
+  max-width: 200px;
+  text-align: center;
+  height: 35px;
+  padding: 10px;
+  border: 1px solid var(--bluish);
+  border-radius: 5px;
 }
 
 #results-div {
-    font-size: 22px;
-    font-weight: 500;
-    text-align: center;
-    width: 230px;
-    height: 310px;
-    margin-top: 18px;
-    padding: 5px;
-    overflow: scroll;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  width: 100%;
+  max-width: 230px;
+  height: 310px;
+  margin-top: 18px;
+  padding: 5px;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+/* Scrollbar Styling */
+#results-div::-webkit-scrollbar {
+  width: 6px;
+}
+
+#results-div::-webkit-scrollbar-thumb {
+  background-color: var(--bluish);
+  border-radius: 3px;
 }
 
 .buttons-div {
-    margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
 }
 
 button {
-    font-size: 1.2rem;
-    width: 100px;
-    height: 35px;
-    margin: 2px;
-    background-image: linear-gradient(#ffffff, #928d86);
-    border-color: white;
+  font-size: 1rem;
+  width: 90px;
+  height: 35px;
+  margin: 3px;
+  padding: 5px;
+  background-image: linear-gradient(#ffffff, #928d86);
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: 0.3s;
+  text-align: center;
+}
+
+/* Button Hover Effect */
+button:hover {
+  background-image: linear-gradient(#928d86, #ffffff);
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .phone-div {
+    height: 450px;
+    max-width: 220px;
+  }
+
+  .screen-div {
+    height: 380px;
+    max-width: 200px;
+  }
+
+  #results-div {
+    font-size: 1rem;
+    height: 280px;
+  }
+
+  .buttons-div {
+    width: 100%;
+    justify-content: ;
+  }
+
+  button {
+    width: 80px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .phone-div {
+    height: 400px;
+    max-width: 200px;
+  }
+
+  .screen-div {
+    height: 350px;
+    max-width: 180px;
+  }
+
+  #results-div {
+    font-size: 0.9rem;
+    height: 250px;
+  }
+
+  button {
+    width: 70px;
+    height: 28px;
+    font-size: 0.8rem;
+  }
 }
