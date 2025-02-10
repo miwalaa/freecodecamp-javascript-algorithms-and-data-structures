@@ -1,4 +1,4 @@
-<h1 align="center" id="title">Responsive Web Design</h1>
+<h1 align="center" id="title">Javascript Algorithms and Data Structures</h1>
 
 <p align="center"><img src="https://socialify.git.ci/miwalaa/freecodecamp-responsive-web-design/image?language=1&name=1&owner=1&theme=Light" alt="project-image"></p>
 
