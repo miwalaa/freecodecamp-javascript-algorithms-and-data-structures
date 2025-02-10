@@ -134,9 +134,9 @@ main {
 /* Button Container */
 .btn-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  grid-template-rows: repeat(3, 1fr); /* 3 rows */
-  gap: 5px; /* Adjust spacing between buttons */
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 5px;
   width: 100px;
   height: 70px;
   padding: 5px;
