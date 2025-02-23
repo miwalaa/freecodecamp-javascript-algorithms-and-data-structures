@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Search App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <img
+      src="https://cdn.freecodecamp.org/platform/universal/fcc_primary.svg"
+      alt="freecodecamp logo"
+      height="30px"
+    />
+    <h1>Pokémon Search App</h1>
+    <div class="card">
+      <form class="search-form">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search for Pokémon Name or ID:"
+          required
+        />
+        <button id="search-button" type="submit">Search</button>
+      </form>
+      <div class="pokemon-div">
+        <div class="pokemon-name-div">
+          <p id="pokemon-name">PIKACHU</p>
+          <p id="pokemon-id">#25</p>
+        </div>
+        <div class="pokemon-hw-div">
+          <p id="weight">Weight: 60</p>
+          <p id="height">Height: 4</p>
+        </div>
+        <div class="pokemon-image-div">
+          <img
+            src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/26.png"
+            alt="front default sprite"
+          />
+        </div>
+        <div class="pokemon-type-div">
+          <p id="types">ELECTRIC</p>
+        </div>
+      </div>
+      <div class="stats-div">
+        <h2>Base Stats</h2>
+        <div class="stat-div">
+          <p>HP</p>
+          <p id="hp">100</p>
+        </div>
+        <div class="stat-div">
+          <p>Attack</p>
+          <p id="attack">100</p>
+        </div>
+        <div class="stat-div">
+          <p>Defense</p>
+          <p id="defense">100</p>
+        </div>
+        <div class="stat-div">
+          <p>Special Attack</p>
+          <p id="speacial-attack">100</p>
+        </div>
+        <div class="stat-div">
+          <p>Special Defense</p>
+          <p id="special-defence">100</p>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
