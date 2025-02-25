@@ -253,7 +253,7 @@ button:hover {
   display: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 450px) {
   h1 {
     font-size: 1.8rem;
   }
