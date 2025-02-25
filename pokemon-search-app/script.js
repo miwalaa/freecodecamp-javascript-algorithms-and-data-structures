@@ -34,15 +34,16 @@ async function displayPokemon(){
 
     pokemonName.innerText = `${toTitleCase(data.name)}`;
     pokemonId.innerText = `#${data.id}`;
-    weight.innerText = `Weight: ${data.weight}`;
-    height.innerText = `Height: ${data.height}`;
+    weight.innerText = `Weight: ${(data.weight / 10).toFixed(1)} kg`;
+    height.innerText = `Height: ${(data.height / 10).toFixed(1)} m`;    
     sprite.src = data.sprites.front_default;
     
     types.innerHTML = ""; // Clear previous types
 
     data.types.forEach(typeInfo => {
       const typeElement = document.createElement("p"); // Create a new <p> for each type
-      typeElement.textContent = typeInfo.type.name.toUpperCase(); // Convert to uppercase
+      typeElement.textContent = typeInfo.type.name;
+      typeElement.classList.add(`type-${typeInfo.type.name}`)
       types.appendChild(typeElement);
     });
 
@@ -97,9 +98,9 @@ function updateStatsBar(stats) {
     statBar.style.width = `${statPercentage}%`; // Keep within 100% max
     statBar.classList.remove("high", "medium", "low");
 
-    if (statPercentage > 60) {
+    if (statPercentage > 40) {
       statBar.classList.add("high"); // Green
-    } else if (statPercentage > 30) {
+    } else if (statPercentage > 20) {
       statBar.classList.add("medium"); // Yellow
     } else {
       statBar.classList.add("low"); // Red

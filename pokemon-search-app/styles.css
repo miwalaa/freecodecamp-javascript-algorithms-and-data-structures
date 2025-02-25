@@ -7,30 +7,18 @@
 
 /* Body styling */
 body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  gap: 20px;
-  font-family: "Poppins", sans-serif;
-  color: #333;
   background: url("https://mir-s3-cdn-cf.behance.net/project_modules/1400/78e9b297274675.5ec183d6a2ae5.jpg")
     no-repeat center/cover;
-  position: relative;
   padding: 20px;
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(1px);
-  z-index: -1;
+  position: relative;
+  min-height: 105vh;
+  gap: 20px;
 }
 
 /* Headings */
@@ -43,12 +31,12 @@ h1 {
 .card {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  justify-content: space-between;
   width: 400px;
-  padding: 5px 25px 25px;
-  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0 25px;
+  background-color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 2px 7px 18px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(10px);
 }
@@ -81,7 +69,7 @@ input:focus {
 button {
   width: 10%;
   border: none;
-  border-radius: 50px;
+  border-radius: 50%;
   cursor: pointer;
   font-size: 1.2rem;
   color: #fff;
@@ -112,11 +100,23 @@ button:hover {
 }
 
 .pokemon-hw-div {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .pokemon-image-div img {
   height: 200px;
+}
+
+.types-div {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.types-div p {
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 15px;
 }
 
 /* Stats Section */
@@ -124,6 +124,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  margin-bottom: 25px;
+  border-radius: 5px;
 }
 
 .stats-div h2 {
@@ -133,6 +135,7 @@ button:hover {
 }
 
 .stat-div {
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -155,7 +158,7 @@ button:hover {
   height: 4px;
   width: 0;
   border-radius: 10px;
-  transition: width 1s ease-in-out;
+  transition: width 1.5s ease-in-out;
 }
 
 /* HP Bar Colors */
@@ -169,6 +172,96 @@ button:hover {
   background-color: #f44336;
 }
 
+/* Pokemon type colors */
+.type-normal {
+  background-color: #a8a77a;
+  color: #000000;
+} /* Light Olive */
+.type-fire {
+  background-color: #ee8130;
+  color: #ffffff;
+} /* Orange */
+.type-water {
+  background-color: #6390f0;
+  color: #ffffff;
+} /* Blue */
+.type-electric {
+  background-color: #f7d02c;
+  color: #000000;
+} /* Yellow */
+.type-grass {
+  background-color: #7ac74c;
+  color: #000000;
+} /* Green */
+.type-ice {
+  background-color: #96d9d6;
+  color: #000000;
+} /* Cyan */
+.type-fighting {
+  background-color: #c22e28;
+  color: #ffffff;
+} /* Dark Red */
+.type-poison {
+  background-color: #a33ea1;
+  color: #ffffff;
+} /* Purple */
+.type-ground {
+  background-color: #e2bf65;
+  color: #000000;
+} /* Sand */
+.type-flying {
+  background-color: #a98ff3;
+  color: #000000;
+} /* Light Purple */
+.type-psychic {
+  background-color: #f95587;
+  color: #ffffff;
+} /* Pinkish Red */
+.type-bug {
+  background-color: #a6b91a;
+  color: #000000;
+} /* Yellow-Green */
+.type-rock {
+  background-color: #b6a136;
+  color: #000000;
+} /* Brownish Yellow */
+.type-ghost {
+  background-color: #735797;
+  color: #ffffff;
+} /* Dark Purple */
+.type-dragon {
+  background-color: #6f35fc;
+  color: #ffffff;
+} /* Deep Purple */
+.type-dark {
+  background-color: #705746;
+  color: #ffffff;
+} /* Brownish Black */
+.type-steel {
+  background-color: #b7b7ce;
+  color: #000000;
+} /* Light Gray */
+.type-fairy {
+  background-color: #d685ad;
+  color: #000000;
+} /* Pink */
+
+/* Hidden class */
 .hidden {
   display: none;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  .card {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  button {
+    width: 12%;
+    font-size: 1rem;
+  }
 }
